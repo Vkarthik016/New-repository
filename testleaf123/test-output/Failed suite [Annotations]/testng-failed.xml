@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Failed suite [Annotations]]" guice-stage="DEVELOPMENT" verbose="2">
+  <test thread-count="5" parallel="tests" name="IETest(failed)(failed)" verbose="2">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="week5.day1.Editlead">
+        <methods>
+          <include name="beforesteps"/>
+          <include name="aftersteps"/>
+          <include name="editlead"/>
+        </methods>
+      </class> <!-- week5.day1.Editlead -->
+      <class name="week5.day1.DuplicateLead">
+        <methods>
+          <include name="duplicatelead"/>
+          <include name="beforesteps"/>
+          <include name="aftersteps"/>
+        </methods>
+      </class> <!-- week5.day1.DuplicateLead -->
+      <class name="week5.day1.Createlead">
+        <methods>
+          <include name="createlead"/>
+          <include name="beforesteps"/>
+          <include name="aftersteps"/>
+        </methods>
+      </class> <!-- week5.day1.Createlead -->
+    </classes>
+  </test> <!-- IETest(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Annotations]] -->
