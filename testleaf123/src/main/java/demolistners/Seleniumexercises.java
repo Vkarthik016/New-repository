@@ -592,24 +592,226 @@ public class Seleniumexercises {
 		
 	}System.out.println(n1);
 }
+	
 	public void countnumberofdigits()
 	{
 		int n=1233;
-		int count;
-		
-		
+		int sum=0;
+		String num = Integer.toString(n);
+		for(int i=0;i<num.length();i++)
+		{
+			int n1 = num.charAt(i) -'0';
+
+			sum = sum+n1;
+		}
+		System.out.println(sum);
+	}
+
+	public void try1()
+	{
+		int n1 = 12353;
+		int n2;
+		int sum=0;
+		String str1=	Integer.toString(n1);
+		char[] ch1=	str1.toCharArray();
+
+		for(int i=0;i<ch1.length;i++)
+		{
+			n2=	ch1[i] -'0';
+			sum = sum + n2;
+		}
+		System.out.println(sum);
+
+	}
+
+
+	public void dummy()
+	{
+		String str ="thi is is";
+		String[]	ch= str.split(" ");
+		System.out.println((ch.length));
+		char[] ch1 =str.toCharArray();
+		System.out.println(ch1.length);
+	}
+
+	public void palindrome()
+	{
+		int n=121;
+		String n1=    Integer.toString(n);
+		String n2=" ";
+		//for(int i=0;i<n1.length();i++)
+		for(int i=n1.length()-1;i>=0;i--)
+		{
+			n2+=n1.charAt(i)-'0';
+			// System.out.println(n2);
+
+		}
+		if(n1.equals(n2))
+		{
+			System.out.println("palindrome");
+		}
+		else
+		{
+			System.out.println("not palindrome");
+		}
+
+	}
+
+	public void findthepositionofchracter()
+	{
+		String a = "karthik123k";
+		String b ="123";
+
+		for(int i=0;i<a.length();i++)
+		{
+			for(int j=0;j<b.length();j++)
+			{
+				if(a.charAt(i)==b.charAt(j))
+				{
+					System.out.println(b.charAt(j) + "position is"+( i+1));
+				}
+			}
+		}
+
+	}
+
+	public void findpositionusingrray()
+	{
+		String a = "ka3rthik123k2";
+		String b ="123k";
+
+		char[]c=	a.toCharArray();
+		char[]d =b.toCharArray();
+		for(int i=0;i<c.length;i++)
+		{
+			for(int j=0;j<d.length;j++)
+			{
+				if(c[i]==d[j])
+				{
+					System.out.println(d[j] +"="+(i+1) );
+				}
+			}
+
+		}
+
+	}
+	public void countcharacter()
+	{
+		String a="234testing33";
+		String b=	a.replaceAll("[0-9]", "");
+		System.out.println(b);
+		int count=0;
+		for(int i=0;i<b.length();i++)
+		{
+			count++;
+		}
+		System.out.println("total number of characters in this string is= "+ count);
+	}
+
+	public void removewhitespace()
+	{
+		String a="test test test";
+		String b=	a.replaceAll(" ", "");
+		System.out.println(b);
+	}
+
+	public void swapusingthirdvariable()
+	{
+		int a=10;
+		int b=20;
+		int c=0;
+		c=a;
+		a=b;
+		b=c;
+		System.out.println(a + " ," +b);
+	}
+	public void swapwithoutthirdvar()
+	{
+		int a=10;
+		int b=20;
+
+		a=a+b; //10+20 =30
+		b=a-b; //30-20 =10
+		a=a-b; //30-10 =20
+		System.out.println(a + " ," + b);
+	}
+	public void palindrome1()
+	{
+		String a="malayalam";
+
+		String b="";
+		for(int i=a.length()-1;i>=0;i--)
+		{
+			b+=a.charAt(i);
+			//System.out.println(b);
+		}
+		if(a.equals(b))
+		{
+			System.out.println("palindrome");
+		}
+		else
+		{
+			System.out.println("not palindrome");
+		}
+	}
+
+	public void amstrongnum()
+	{
+		int n=153;
+		int n1=0;
+		int n2=0;
+		String s=	Integer.toString(n);
+		for(int i=0;i<s.length();i++)
+		{
+			n1=s.charAt(i);
+			n2=n1*n1*n1;
+			System.out.println(s.charAt(i));}
+	}
+
+	public void countcharexceptspace()
+	{
+		String str ="thi is is";
+		char[]	ch=str.toCharArray();
+		char s=' ';
+		int count=0;
+		for(int i=0;i<str.length();i++)
+		{
+			if(str.charAt(i) != ' ')
+			{
+				count++;
+			 s=	str.charAt(i);
+			}
+			System.out.println(s + "=" + count);	
+		}
 	}
 	
 	
+	public void sumofcount()
+	{
+		int[] num = {2,4,5,6,7,4};
+		int target =8;
+		
+		for(int i=0;i<num.length;i++)
+		{
+			for(int j=i+1;j<num.length;j++)
+			{
+				if(num[i] + num[j]==target)
+				{
+					System.out.println(i +","+j);
+				}
+			}
+				
+		}
+	}
 	
-
-
-
-
-
-
-
-
+	public void reverseArray()
+	{
+		char[] c = {'a','b','c','f'};
+		for(int i=c.length-1;i>=0;i--)
+		{
+			System.out.print(c[i]);
+		}
+	}
 
 
 
@@ -649,6 +851,18 @@ public class Seleniumexercises {
 		//s.countstringchar();
 		//s.countstringcharusingsplit();
 		//s.factorial();
+		//s.dummy();
+		//s.countnumberofdigits();
+		//s.try1();
+		//s.findthepositionofchracter();
+		//s.findpositionusingrray();
+		//s.countcharacter();
+		//s.removewhitespace();
+		//s.amstrongnum();
+		//s.countcharexceptspace();
+		//s.sumofcount();
+		s.reverseArray();
+
 		
 
 
